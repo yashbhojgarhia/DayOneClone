@@ -97,7 +97,7 @@
         <!--Item-->
         <scene sceneID="1c4-Ru-h0k">
             <objects>
-                <tableViewController modalPresentationStyle="overFullScreen" id="Sjt-2V-OAv" customClass="JournalTableViewController" customModule="Day_One_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="Sjt-2V-OAv" customClass="JournalTableViewController" customModule="Day_One_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="e7c-Qw-dCk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,13 +135,80 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="NgD-Ii-edP">
-                                <rect key="frame" x="0.0" y="225.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="JournalCell" rowHeight="100" id="NgD-Ii-edP" customClass="JournalCell" customModule="Day_One_Clone" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="225.5" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NgD-Ii-edP" id="piO-7P-6C9">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m7h-SV-ac2">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="5Sr-74-sFA"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVe-3D-rsO">
+                                            <rect key="frame" x="354" y="79" width="60" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="2CJ-UZ-mIw"/>
+                                                <constraint firstAttribute="height" constant="21" id="IWu-oy-UVX"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okx-ZF-HUi">
+                                            <rect key="frame" x="354" y="21" width="60" height="58"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="6nF-Ky-wJM"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dvm-GM-vHA">
+                                            <rect key="frame" x="105" y="0.0" width="249" height="100"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4C0-bo-GkH">
+                                            <rect key="frame" x="354" y="0.0" width="60" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Nbk-Rt-E5x"/>
+                                                <constraint firstAttribute="width" constant="60" id="i3Z-Wp-iEd"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Dvm-GM-vHA" firstAttribute="leading" secondItem="m7h-SV-ac2" secondAttribute="trailing" constant="5" id="BZq-h9-YiZ"/>
+                                        <constraint firstItem="Dvm-GM-vHA" firstAttribute="top" secondItem="piO-7P-6C9" secondAttribute="top" id="FAL-VY-aHg"/>
+                                        <constraint firstAttribute="trailing" secondItem="4C0-bo-GkH" secondAttribute="trailing" id="FCD-41-TOQ"/>
+                                        <constraint firstItem="fVe-3D-rsO" firstAttribute="top" secondItem="okx-ZF-HUi" secondAttribute="bottom" id="SLY-VV-Rt2"/>
+                                        <constraint firstAttribute="bottom" secondItem="Dvm-GM-vHA" secondAttribute="bottom" id="YJU-BQ-ofo"/>
+                                        <constraint firstAttribute="bottom" secondItem="fVe-3D-rsO" secondAttribute="bottom" id="Zyu-aF-SD5"/>
+                                        <constraint firstItem="m7h-SV-ac2" firstAttribute="leading" secondItem="piO-7P-6C9" secondAttribute="leading" id="aW2-BQ-qSd"/>
+                                        <constraint firstItem="4C0-bo-GkH" firstAttribute="leading" secondItem="Dvm-GM-vHA" secondAttribute="trailing" id="bN6-hc-MvY"/>
+                                        <constraint firstAttribute="trailing" secondItem="okx-ZF-HUi" secondAttribute="trailing" id="c9O-CV-cSd"/>
+                                        <constraint firstItem="m7h-SV-ac2" firstAttribute="top" secondItem="piO-7P-6C9" secondAttribute="top" id="fE7-Zr-IUN"/>
+                                        <constraint firstAttribute="trailing" secondItem="fVe-3D-rsO" secondAttribute="trailing" id="ffE-FI-0Ga"/>
+                                        <constraint firstItem="okx-ZF-HUi" firstAttribute="top" secondItem="4C0-bo-GkH" secondAttribute="bottom" id="iyo-fY-Xmy"/>
+                                        <constraint firstAttribute="bottom" secondItem="m7h-SV-ac2" secondAttribute="bottom" id="oZp-7A-WRg"/>
+                                        <constraint firstItem="4C0-bo-GkH" firstAttribute="top" secondItem="piO-7P-6C9" secondAttribute="top" id="qcc-3f-Btc"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="okx-ZF-HUi" id="8DJ-o7-fO3"/>
+                                    <outlet property="imageViewWidth" destination="5Sr-74-sFA" id="Hcx-Gh-VGv"/>
+                                    <outlet property="monthLabel" destination="4C0-bo-GkH" id="2Wy-H9-VJ7"/>
+                                    <outlet property="previewImageView" destination="m7h-SV-ac2" id="Kdj-W3-G5q"/>
+                                    <outlet property="previewTextLabel" destination="Dvm-GM-vHA" id="21n-Ij-UKq"/>
+                                    <outlet property="yearLabel" destination="fVe-3D-rsO" id="0Si-Ga-64a"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -164,7 +231,7 @@
         <!--Create Journal View Controller-->
         <scene sceneID="2aZ-xl-yrW">
             <objects>
-                <viewController modalPresentationStyle="overFullScreen" id="SB7-OC-8yJ" customClass="CreateJournalViewController" customModule="Day_One_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="SB7-OC-8yJ" customClass="CreateJournalViewController" customModule="Day_One_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SEB-ie-gBX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

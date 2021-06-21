@@ -28,6 +28,25 @@ class Picture: Object {
         }
     }
     
+    func fullImage() -> UIImage {
+        return imageWithFileName(fileName: fullImageName)
+    }
+    
+    func thumbnail() -> UIImage {
+        return imageWithFileName(fileName: thumbnailName)
+    }
+    
+    func imageWithFileName(fileName: String) -> UIImage {
+        var path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        path.appendPathComponent(fileName)
+        if let imageData = try? Data(contentsOf: path) {
+            if let image = UIImage(data: imageData) {
+                return image
+            }
+        }
+        return UIImage()
+    }
+ 
     func imageToURLString(image: UIImage) -> String {
         if let imageData = image.pngData() {
             let fileName = UUID().uuidString + ".png"

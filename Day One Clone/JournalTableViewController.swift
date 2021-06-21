@@ -10,6 +10,8 @@ import RealmSwift
 
 class JournalTableViewController: UITableViewController {
     
+    var entries: Results<Entry>?
+    
     @IBOutlet weak var whiteCameraButton: UIButton!
     @IBOutlet weak var whitePlusButton: UIButton!
     
@@ -18,25 +20,48 @@ class JournalTableViewController: UITableViewController {
 
         whiteCameraButton.imageView?.contentMode = .scaleAspectFit
         whitePlusButton.imageView?.contentMode = .scaleAspectFit
-        
-        if let realm = try? Realm() {
-            let entries = realm.objects(Entry.self)
-            print(entries[0].text)
-            print(entries[0].date)
-            print(entries[0].pictures.count)
-        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getEntries()
     }
 
+    func getEntries() {
+        if let realm = try? Realm() {
+            entries = realm.objects(Entry.self).sorted(byKeyPath: "date", ascending: false)
+            tableView.reloadData()
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return entries?.count ?? 0
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "JournalCell", for: indexPath) as? JournalCell {
+            if let entry = entries?[indexPath.row] {
+                cell.previewTextLabel.text = entry.text
+                if let image = entry.pictures.first?.thumbnail() {
+                    cell.imageViewWidth.constant = 100
+                    cell.previewImageView.image = image
+                } else {
+                    cell.imageViewWidth.constant = 0
+                }
+            }
+            
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
     @IBAction func cameraTapped(_ sender: Any) {
@@ -58,4 +83,13 @@ class JournalTableViewController: UITableViewController {
         }
     }
     
+}
+
+class JournalCell: UITableViewCell {
+    @IBOutlet weak var previewImageView: UIImageView!
+    @IBOutlet weak var imageViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var previewTextLabel: UILabel!
+    @IBOutlet weak var monthLabel: UILabel!
+    @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
 }
