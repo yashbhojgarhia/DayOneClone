@@ -102,9 +102,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="khO-ne-Lwb">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="201"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0mf-yX-xoU">
+                                    <rect key="frame" x="0.0" y="70" width="414" height="61"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="au4-zv-Ijf">
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="61"/>
+                                            <state key="normal" image="whiteCamera"/>
+                                            <connections>
+                                                <action selector="cameraTapped:" destination="Sjt-2V-OAv" eventType="touchUpInside" id="9zy-sP-wMj"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXU-0L-eEW">
+                                            <rect key="frame" x="207" y="0.0" width="207" height="61"/>
+                                            <state key="normal" image="add"/>
+                                            <connections>
+                                                <action selector="plusTapped:" destination="Sjt-2V-OAv" eventType="touchUpInside" id="ZzF-SJ-Yho"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.29803921568627451" green="0.75686274509803919" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="0mf-yX-xoU" firstAttribute="top" secondItem="khO-ne-Lwb" secondAttribute="top" constant="70" id="2bI-V4-gKr"/>
+                                <constraint firstAttribute="trailing" secondItem="0mf-yX-xoU" secondAttribute="trailing" id="HSN-pz-aNl"/>
+                                <constraint firstAttribute="bottom" secondItem="0mf-yX-xoU" secondAttribute="bottom" constant="70" id="VFf-AH-0qe"/>
+                                <constraint firstItem="0mf-yX-xoU" firstAttribute="leading" secondItem="khO-ne-Lwb" secondAttribute="leading" id="z2k-1a-f9P"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="NgD-Ii-edP">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="225.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NgD-Ii-edP" id="piO-7P-6C9">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -118,15 +150,20 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="cZE-pa-xDY"/>
+                    <connections>
+                        <outlet property="whiteCameraButton" destination="au4-zv-Ijf" id="0B8-z6-PKS"/>
+                        <outlet property="whitePlusButton" destination="WXU-0L-eEW" id="lQr-VD-zb1"/>
+                        <segue destination="SB7-OC-8yJ" kind="presentation" identifier="goToNew" id="fkY-sY-1w1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AX1-tU-9S3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097" y="-532"/>
+            <point key="canvasLocation" x="1095.6521739130435" y="-532.36607142857144"/>
         </scene>
         <!--Create Journal View Controller-->
         <scene sceneID="2aZ-xl-yrW">
             <objects>
-                <viewController id="SB7-OC-8yJ" customClass="CreateJournalViewController" customModule="Day_One_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="SB7-OC-8yJ" customClass="CreateJournalViewController" customModule="Day_One_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SEB-ie-gBX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cn9-ge-Y2s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1748" y="-532"/>
+            <point key="canvasLocation" x="1857" y="-532"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="ivU-8c-MP7">
@@ -153,6 +190,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="256" height="256"/>
+        <image name="whiteCamera" width="256" height="256"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
