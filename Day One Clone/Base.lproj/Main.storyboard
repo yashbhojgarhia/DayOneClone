@@ -78,7 +78,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="eOM-Aj-lMN">
             <objects>
-                <tabBarController id="uAH-yI-lRF" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="overFullScreen" id="uAH-yI-lRF" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="pxU-iB-F1s"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8Ng-va-yq3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -97,7 +97,7 @@
         <!--Item-->
         <scene sceneID="1c4-Ru-h0k">
             <objects>
-                <tableViewController id="Sjt-2V-OAv" customClass="JournalTableViewController" customModule="Day_One_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="overFullScreen" id="Sjt-2V-OAv" customClass="JournalTableViewController" customModule="Day_One_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="e7c-Qw-dCk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,6 +150,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="cZE-pa-xDY"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="whiteCameraButton" destination="au4-zv-Ijf" id="0B8-z6-PKS"/>
                         <outlet property="whitePlusButton" destination="WXU-0L-eEW" id="lQr-VD-zb1"/>
@@ -163,13 +164,13 @@
         <!--Create Journal View Controller-->
         <scene sceneID="2aZ-xl-yrW">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="SB7-OC-8yJ" customClass="CreateJournalViewController" customModule="Day_One_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overFullScreen" id="SB7-OC-8yJ" customClass="CreateJournalViewController" customModule="Day_One_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SEB-ie-gBX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="13H-42-rAX">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="SPK-65-lpU">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FUR-hB-pa5"/>
@@ -178,7 +179,7 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hpq-qD-7IJ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p8y-Xr-ItD">
@@ -216,7 +217,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="loi-Dl-o77"/>
                             </scrollView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Mf2-fi-XU2">
-                                <rect key="frame" x="0.0" y="132" width="414" height="650"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="694"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -231,7 +232,7 @@
                                 <state key="normal" title="Set Date"/>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="GEt-ag-afN">
-                                <rect key="frame" x="0.0" y="132" width="414" height="620"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="664"/>
                             </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cui-Yi-hNo"/>
@@ -260,6 +261,7 @@
                             <constraint firstItem="GEt-ag-afN" firstAttribute="top" secondItem="13H-42-rAX" secondAttribute="bottom" id="tmc-Nh-JVo"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cn9-ge-Y2s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
