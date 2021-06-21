@@ -1,0 +1,26 @@
+PODS:
+  - Realm (10.8.0):
+    - Realm/Headers (= 10.8.0)
+  - Realm/Headers (10.8.0)
+  - RealmSwift (10.8.0):
+    - Realm (= 10.8.0)
+  - Toucan (1.1.0)
+
+DEPENDENCIES:
+  - RealmSwift
+  - Toucan
+
+SPEC REPOS:
+  trunk:
+    - Realm
+    - RealmSwift
+    - Toucan
+
+SPEC CHECKSUMS:
+  Realm: ad3c5cd762e5a5bc02080fc55aa04a0e43f98575
+  RealmSwift: 316e450478fb01e06ece4438dda42f407c5f51d2
+  Toucan: 8f228fabb21521b9658692df9325fe76e71d74b2
+
+PODFILE CHECKSUM: 30aaf3f9ef073a40a3eb091c36631a335b1ed5db
+
+COCOAPODS: 1.10.1

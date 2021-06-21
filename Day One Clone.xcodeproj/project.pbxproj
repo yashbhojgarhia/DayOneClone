@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,9 +16,12 @@
 		47B9C6712680A9FF00362893 /* JournalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9C6702680A9FF00362893 /* JournalTableViewController.swift */; };
 		47B9C6732680AA2800362893 /* CreateJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9C6722680AA2800362893 /* CreateJournalViewController.swift */; };
 		47B9C6752680AA5500362893 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9C6742680AA5500362893 /* PhotoCollectionViewController.swift */; };
+		47B9C6772681147E00362893 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9C6762681147E00362893 /* Models.swift */; };
+		EC38F0D253F013797F4DC128 /* Pods_Day_One_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6441DE627EDF916F5269DE60 /* Pods_Day_One_Clone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17442E60B0B56619B3116B50 /* Pods-Day One Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Day One Clone.release.xcconfig"; path = "Target Support Files/Pods-Day One Clone/Pods-Day One Clone.release.xcconfig"; sourceTree = "<group>"; };
 		47B9C657268093FB00362893 /* Day One Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Day One Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B9C65A268093FB00362893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47B9C65C268093FB00362893 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +33,9 @@
 		47B9C6702680A9FF00362893 /* JournalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewController.swift; sourceTree = "<group>"; };
 		47B9C6722680AA2800362893 /* CreateJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJournalViewController.swift; sourceTree = "<group>"; };
 		47B9C6742680AA5500362893 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		47B9C6762681147E00362893 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		6441DE627EDF916F5269DE60 /* Pods_Day_One_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Day_One_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDCF8F24DEC3F06E63E7CB9E /* Pods-Day One Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Day One Clone.debug.xcconfig"; path = "Target Support Files/Pods-Day One Clone/Pods-Day One Clone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC38F0D253F013797F4DC128 /* Pods_Day_One_Clone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AC8C93A2FAB790F2C802CAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6441DE627EDF916F5269DE60 /* Pods_Day_One_Clone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		47B9C64E268093FB00362893 = {
 			isa = PBXGroup;
 			children = (
 				47B9C659268093FB00362893 /* Day One Clone */,
 				47B9C658268093FB00362893 /* Products */,
+				83E9E3BF71B58164F0FF006E /* Pods */,
+				1AC8C93A2FAB790F2C802CAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,11 +86,21 @@
 				47B9C6702680A9FF00362893 /* JournalTableViewController.swift */,
 				47B9C6722680AA2800362893 /* CreateJournalViewController.swift */,
 				47B9C6742680AA5500362893 /* PhotoCollectionViewController.swift */,
+				47B9C6762681147E00362893 /* Models.swift */,
 				47B9C663268093FC00362893 /* Assets.xcassets */,
 				47B9C665268093FC00362893 /* LaunchScreen.storyboard */,
 				47B9C668268093FC00362893 /* Info.plist */,
 			);
 			path = "Day One Clone";
+			sourceTree = "<group>";
+		};
+		83E9E3BF71B58164F0FF006E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDCF8F24DEC3F06E63E7CB9E /* Pods-Day One Clone.debug.xcconfig */,
+				17442E60B0B56619B3116B50 /* Pods-Day One Clone.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47B9C66B268093FC00362893 /* Build configuration list for PBXNativeTarget "Day One Clone" */;
 			buildPhases = (
+				A62CBFA56BFB0E0F9C203BD8 /* [CP] Check Pods Manifest.lock */,
 				47B9C653268093FB00362893 /* Sources */,
 				47B9C654268093FB00362893 /* Frameworks */,
 				47B9C655268093FB00362893 /* Resources */,
+				21070ED00009F5EEBDB45781 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +170,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21070ED00009F5EEBDB45781 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Day One Clone/Pods-Day One Clone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Day One Clone/Pods-Day One Clone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Day One Clone/Pods-Day One Clone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A62CBFA56BFB0E0F9C203BD8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Day One Clone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		47B9C653268093FB00362893 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -152,6 +223,7 @@
 				47B9C6712680A9FF00362893 /* JournalTableViewController.swift in Sources */,
 				47B9C65D268093FB00362893 /* SceneDelegate.swift in Sources */,
 				47B9C6732680AA2800362893 /* CreateJournalViewController.swift in Sources */,
+				47B9C6772681147E00362893 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +367,7 @@
 		};
 		47B9C66C268093FC00362893 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDCF8F24DEC3F06E63E7CB9E /* Pods-Day One Clone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -313,6 +386,7 @@
 		};
 		47B9C66D268093FC00362893 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17442E60B0B56619B3116B50 /* Pods-Day One Clone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
