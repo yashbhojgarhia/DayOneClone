@@ -53,6 +53,9 @@ class JournalTableViewController: UITableViewController {
                 } else {
                     cell.imageViewWidth.constant = 0
                 }
+                cell.dateLabel.text = entry.dayString()
+                cell.monthLabel.text = entry.monthString()
+                cell.yearLabel.text = entry.yearString()
             }
             
             return cell
