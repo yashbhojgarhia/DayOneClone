@@ -75,11 +75,11 @@
             </objects>
             <point key="canvasLocation" x="-362" y="-514"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Day One Clone-->
         <scene sceneID="eOM-Aj-lMN">
             <objects>
                 <tabBarController modalPresentationStyle="overFullScreen" id="uAH-yI-lRF" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="pxU-iB-F1s"/>
+                    <navigationItem key="navigationItem" title="Day One Clone" id="pxU-iB-F1s"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8Ng-va-yq3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -219,6 +219,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="cZE-pa-xDY"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="headerView" destination="khO-ne-Lwb" id="LTh-kC-xie"/>
                         <outlet property="whiteCameraButton" destination="au4-zv-Ijf" id="0B8-z6-PKS"/>
                         <outlet property="whitePlusButton" destination="WXU-0L-eEW" id="lQr-VD-zb1"/>
                         <segue destination="SB7-OC-8yJ" kind="presentation" identifier="goToNew" id="fkY-sY-1w1"/>
@@ -363,7 +364,7 @@
         <!--Split View Controller-->
         <scene sceneID="ivU-8c-MP7">
             <objects>
-                <splitViewController allowDoubleColumnStyle="YES" id="9bh-op-kog" sceneMemberID="viewController">
+                <splitViewController allowDoubleColumnStyle="YES" id="9bh-op-kog" customClass="SplitViewController" customModule="Day_One_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="prj-p5-btc" kind="relationship" relationship="masterViewController" id="Cj0-Gm-m5g"/>
                         <segue destination="y1h-BJ-bqc" kind="relationship" relationship="detailViewController" id="x61-gx-GFv"/>

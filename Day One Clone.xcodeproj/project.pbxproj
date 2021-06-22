@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		474EEA7326825F5E004B6383 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474EEA7226825F5E004B6383 /* SplitViewController.swift */; };
 		47B9C65B268093FB00362893 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9C65A268093FB00362893 /* AppDelegate.swift */; };
 		47B9C65D268093FB00362893 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9C65C268093FB00362893 /* SceneDelegate.swift */; };
 		47B9C662268093FB00362893 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47B9C660268093FB00362893 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		17442E60B0B56619B3116B50 /* Pods-Day One Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Day One Clone.release.xcconfig"; path = "Target Support Files/Pods-Day One Clone/Pods-Day One Clone.release.xcconfig"; sourceTree = "<group>"; };
+		474EEA7226825F5E004B6383 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		47B9C657268093FB00362893 /* Day One Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Day One Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B9C65A268093FB00362893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47B9C65C268093FB00362893 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				47B9C663268093FC00362893 /* Assets.xcassets */,
 				47B9C665268093FC00362893 /* LaunchScreen.storyboard */,
 				47B9C668268093FC00362893 /* Info.plist */,
+				474EEA7226825F5E004B6383 /* SplitViewController.swift */,
 			);
 			path = "Day One Clone";
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				47B9C65D268093FB00362893 /* SceneDelegate.swift in Sources */,
 				47B9C6732680AA2800362893 /* CreateJournalViewController.swift in Sources */,
 				47B9C6772681147E00362893 /* Models.swift in Sources */,
+				474EEA7326825F5E004B6383 /* SplitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
